@@ -9,16 +9,16 @@ from sklearn.preprocessing import StandardScaler
 st.set_page_config(page_title="Loan Prediction", layout="centered")
 
 # ---------------------------------------------
-# HEADER WITH PROFESSIONAL LOGO
+# PROFESSIONAL HEADER (TRANSPARENT LOGO)
 # ---------------------------------------------
 st.markdown("""
     <style>
-    .title-container {
+    .header {
         display: flex;
         align-items: center;
-        gap: 15px;
+        gap: 12px;
     }
-    .main-title {
+    .title {
         font-size: 34px;
         font-weight: 700;
         color: #1f4e79;
@@ -31,11 +31,11 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 st.markdown("""
-<div class="title-container">
-    <img src="https://cdn-icons-png.flaticon.com/512/2920/2920323.png" width="65">
+<div class="header">
+    <img src="https://cdn-icons-png.flaticon.com/512/2331/2331945.png" width="55">
     <div>
-        <div class="main-title">Loan Eligibility Prediction</div>
-        <div class="subtitle">AI-powered loan approval system</div>
+        <div class="title">Loan Eligibility Prediction</div>
+        <div class="subtitle">AI-based loan approval system</div>
     </div>
 </div>
 """, unsafe_allow_html=True)
@@ -99,10 +99,10 @@ gender = st.selectbox("Gender", ["Male", "Female"])
 marital_status = st.selectbox("Marital Status", ["Yes", "No"])
 dependents = st.selectbox("Number of Dependents", ["0", "1", "2", "3+"])
 credit_history = st.selectbox("Credit History", [0, 1])
-loan_amount = st.number_input("Loan Amount (in ₹)", value=120000.0)
+loan_amount = st.number_input("Loan Amount (₹)", value=120000.0)
 
 # ---------------------------------------------
-# INPUT CONVERSION
+# CONVERT INPUT
 # ---------------------------------------------
 gender_value = 1 if gender == "Male" else 0
 marital_value = 1 if marital_status == "Yes" else 0
