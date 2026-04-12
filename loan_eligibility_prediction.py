@@ -9,28 +9,31 @@ from sklearn.preprocessing import StandardScaler
 st.set_page_config(page_title="Loan Prediction", layout="centered")
 
 # ---------------------------------------------
-# CUSTOM UI (LOGO + TITLE)
+# CLEAN PROFESSIONAL HEADER (BEST PRACTICE)
 # ---------------------------------------------
 st.markdown("""
     <style>
-    .title-container {
-        display: flex;
-        align-items: center;
-        gap: 15px;
+    .main-title {
+        font-size: 36px;
+        font-weight: 700;
+        color: #1f4e79;
     }
     .subtitle {
         color: gray;
         margin-top: -10px;
+        margin-bottom: 20px;
     }
     </style>
 """, unsafe_allow_html=True)
 
 st.markdown("""
-    <div class="title-container">
-        <img src="https://cdn-icons-png.flaticon.com/512/2331/2331945.png" width="60">
-        <h1>Loan Eligibility Prediction</h1>
+<div style="display:flex; align-items:center; gap:12px;">
+    <div style="font-size:40px;">🏦📊✔️</div>
+    <div>
+        <div class="main-title">Loan Eligibility Prediction</div>
+        <div class="subtitle">AI-based loan approval system</div>
     </div>
-    <p class="subtitle">Check whether a loan will be approved based on applicant details</p>
+</div>
 """, unsafe_allow_html=True)
 
 # ---------------------------------------------
@@ -64,7 +67,6 @@ def load_data():
 
     return train
 
-
 # ---------------------------------------------
 # TRAIN MODEL
 # ---------------------------------------------
@@ -80,7 +82,6 @@ def train_model(data):
     model.fit(X, y)
 
     return model, scaler
-
 
 data = load_data()
 model, scaler = train_model(data)
@@ -103,7 +104,6 @@ gender_value = 1 if gender == "Male" else 0
 marital_value = 1 if marital_status == "Yes" else 0
 dependents_value = 3 if dependents == "3+" else int(dependents)
 
-# Convert ₹ → dataset scale
 loan_amount_value = loan_amount / 1000
 
 # ---------------------------------------------
@@ -124,8 +124,8 @@ if st.button("Predict Loan Status"):
     st.markdown("---")
 
     if prediction == 1:
-        st.success(f"✅ Loan Approved")
+        st.success("✅ Loan Approved")
         st.write(f"Approval Confidence: **{round(probability*100, 2)}%**")
     else:
-        st.error(f"❌ Loan Not Approved")
+        st.error("❌ Loan Not Approved")
         st.write(f"Rejection Confidence: **{round((1-probability)*100, 2)}%**")
