@@ -73,7 +73,9 @@ The model is trained on a loan dataset containing:
 
 ## 📸 Application Preview
 
-
+<p align="center">
+  <img src="Screenshot 2026-04-14 171734.png" width="700">
+</p>
 
 ---
 
