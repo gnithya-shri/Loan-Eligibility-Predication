@@ -86,3 +86,9 @@ git clone https://github.com/your-username/loan-eligibility-prediction.git
 cd loan-eligibility-prediction
 pip install -r requirements.txt
 streamlit run loan_eligibility_prediction.py
+
+---
+
+## 🌐 Live Demo
+
+https://loan-eligibility-predication-bnywpxettqdezvpr7smohz.streamlit.app
