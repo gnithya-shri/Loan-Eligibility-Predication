@@ -77,6 +77,11 @@ The model is trained on a loan dataset containing:
   <img src="Screenshot 2026-04-14 171734.png" width="700">
 </p>
 
+
+```markdown
+## 🌐 Live Demo
+
+https://loan-eligibility-predication-bnywpxettqdezvpr7smohz.streamlit.app
 ---
 
 ## ▶️ Run Locally
