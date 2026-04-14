@@ -78,10 +78,11 @@ The model is trained on a loan dataset containing:
 </p>
 
 ---
-```markdown
+
 ## 🌐 Live Demo
 
 https://loan-eligibility-predication-bnywpxettqdezvpr7smohz.streamlit.app
+
 ---
 
 ## ▶️ Run Locally
@@ -91,5 +92,3 @@ git clone https://github.com/your-username/loan-eligibility-prediction.git
 cd loan-eligibility-prediction
 pip install -r requirements.txt
 streamlit run loan_eligibility_prediction.py
-
----
